@@ -11,12 +11,28 @@
                 <form [formGroup]="registerForm" (ngSubmit)="OnSubmit()">
                     <div class="form-group">
                       <label class="col-form-label">First Name</label>
-                      <input type="text" class="form-control" formControlName="firstName" placeholder="evan" autofocus>
+                      <input type="text" class="form-control" formControlName="firstName" placeholder="Uttam" autofocus>
                       <span class="text-danger mb-0" *ngIf="firstName.invalid &&  (firstName.touched || formValid)">
                         Please Enter FirstName
                       </span>
+                      <label class="col-form-label">Last Name</label>
+
+                      <!-- Added Last Name Field at add user -->
+                      <input type="text" class="form-control" formControlName="lastName" placeholder="Bhuva" autofocus>
+                      <span class="text-danger mb-0" *ngIf="lastName.invalid &&  (lastName.touched || formValid)">
+                        Please Enter laststName
+                      </span>
                     </div>
-                   
+
+                     <!-- Added Phone Number Field at add user -->
+                     <div class="form-group">
+                      <label class="col-form-label">Phone Number</label>
+                      <input type="text" class="form-control" formControlName="phoneNumber" placeholder="63******40" autofocus>
+                      <span class="text-danger mb-0" *ngIf="phoneNumber.invalid &&  (phoneNumber.touched || formValid)">
+                        Please Enter PhoneNumber
+                      </span>
+                    </div>
+
                     <div class="form-group">
                       <label class="col-form-label">Email Address</label>
                       <input type="text" class="form-control" formControlName="emailAddress" placeholder="evan.donohue@gmail.com">
@@ -59,12 +75,11 @@
                     <div class="d-grid mt-5">
                       <button class="btnSave" type="submit"><span class="Login">Register</span></button>
                     </div>
-    
+
                   </form>
               </div>
-              
+
           </div>
        </div>
      </div>
    </div>
-  
